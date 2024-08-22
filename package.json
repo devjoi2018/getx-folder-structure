@@ -1,4 +1,6 @@
 {
+  "publisher": "JoinnerMedina",
+  "icon": "icon.png",
   "name": "getx-folder-structure",
   "displayName": "Getx folder structure",
   "description": "Create a suitable initial structure adapted to work with the flutter Getx package",
