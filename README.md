@@ -6,9 +6,9 @@ A Visual Studio Code extension to create an initial folder structure suitable fo
 
 ## Features
 
-* Creates an organized folder structure for GetX projects in Flutter.
-* Includes predefined `.dart` files with basic code to speed up development.
-* Easy to use from the VS Code command palette.
+- Creates an organized folder structure for GetX projects in Flutter.
+- Includes predefined `.dart` files with basic code to speed up development.
+- Easy to use from the VS Code command palette.
 
 ## Installation
 
@@ -22,31 +22,52 @@ A Visual Studio Code extension to create an initial folder structure suitable fo
 2. Open the command palette (Ctrl+Shift+P or Cmd+Shift+P).
 3. Type "Getx: Flutter folder structure" and press Enter.
 4. The folder structure and predefined files will be created in the `lib` folder of your project.
+5. Open the terminal and run the following command to add the GetX package:
+   ```
+   flutter pub add get
+   ```
 
 ## Generated folder structure
 
+```
 lib/
-app/
-bindings/
-home_binding.dart
-controllers/
-data/
-models/
-provider/
-routes/
-app_pages.dart
-ui/
-global_widgets/
-pages/
-home_page.dart
-theme/
-utils/
+└── app/
+    ├── bindings/
+    │   └── home_binding.dart
+    ├── controllers/
+    │   ├── home_controller.dart
+    │   └── state_mixin_controllers/
+    │       └── home_state_mixin.dart
+    ├── data/
+    │   ├── global_memory.dart
+    │   ├── models/
+    │   │   └── post_model.dart
+    │   └── provider/
+    │       └── provider.dart
+    ├── routes/
+    │   ├── app_pages.dart
+    │   └── app_routes.dart
+    ├── ui/
+    │   ├── global_widgets/
+    │   ├── pages/
+    │   │   └── home_page/
+    │   │       └── home_page.dart
+    │   └── theme/
+    └── utils/
+```
 
 ## Predefined Files
 
-* `app_pages.dart`: Contains the basic definition of your GetX application's routes.
-* `home_binding.dart`: An example of a home page binding.
-* `home_page.dart`: An example of a home page using GetX.
+- `global_memory.dart`: A placeholder for global memory management.
+- `app_pages.dart`: Contains the basic definition of your GetX application's routes.
+- `app_routes.dart`: Defines the route names used in `app_pages.dart`.
+- `provider.dart`: A provider class for making HTTP requests using GetX's `GetConnect`.
+- `home_binding.dart`: An example of a home page binding, which sets up the dependencies for the home page.
+- `home_controller.dart`: A controller for managing the state and logic of the home page.
+- `home_state_mixin.dart`: A state mixin controller for handling the state of the home page using GetX's `StateMixin`.
+- `post_model.dart`: A model class representing a post, used for parsing JSON data.
+- `home_page.dart`: An example of a home page UI using GetX for state management.
+- `main.dart`: The main entry point of the Flutter application, setting up the initial route and bindings.
 
 ## Contributions
 
